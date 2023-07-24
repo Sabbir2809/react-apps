@@ -14,6 +14,8 @@ import ReactHookForm from './components/Form/ReactHookForm';
 import ExpenseList from './components/Expense-Tracker/components/ExpenseList';
 import ExpenseFilter from './components/Expense-Tracker/components/ExpenseFilter';
 import ExpenseForm from './components/Expense-Tracker/components/ExpenseForm';
+import UseEffect from './components/Backend/UseEffect';
+import ProductList from './components/Backend/ProductList';
 
 const App = () => {
   const [alertVisible, setAlertVisible] = useState(false);
@@ -62,10 +64,12 @@ const App = () => {
         vitae non. Praesentium corrupti error, perferendis tempora quod vel accusantium repellat aut, a,
         mollitia voluptas ipsa deleniti voluptatem saepe exercitationem.
       </ExpandableText> */}
-      {/* <FormUseRef /> */}
-      {/* <FormUseState /> */}
-      {/* <ReactHookForm /> */}
-      <section>
+      {/* <div>
+        <FormUseRef />
+      <FormUseState />
+      <ReactHookForm />
+      </div> */}
+      {/* <section>
         <div className='mb-5'>
           <ExpenseForm
             onSubmit={(newExpense) => setExpenses([...expenses, { ...newExpense, id: expenses.length + 1 }])}
@@ -78,7 +82,8 @@ const App = () => {
           expenses={visibleExpenses}
           OnDelete={(id) => setExpenses(expenses.filter((expense) => expense.id !== id))}
         />
-      </section>
+      </section> */}
+      <UseEffect />
     </div>
   );
 };
