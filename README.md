@@ -1,5 +1,7 @@
 # React.js
 
+[GitHub Repository](https://github.com/mosh-hamedani/react-course-part1)
+
 ### Getting Started with React
 
 **Terms:** JSX, DOM, Virtual DOM, Components: functional vs class, JS Library & Framework
@@ -96,4 +98,17 @@
 1. React Hook Form supports the standard HTML attributes for data validation such as required, minLength, etc.
 1. We can validate our forms using schema-based validation libraries such as joi, yup, zod, etc. With these libraries, we can define all our validation rules in a single place called a schema.
 
-[GitHub Repository](https://github.com/mosh-hamedani/react-course-part1)
+### Managing Component State
+
+**Terms:** axios, backend, effect hook, frontend, http, http request and response, side effects
+
+1. We use the effect hook to perform side effects, such as fetching data or updating the DOM.
+1. The effect hook takes a function that performs the side effect and an optional array of dependencies. Whenever the dependencies change, the effect hook runs again.
+1. To clean up any resources that were created by the effect hook, we can include a cleanup function that runs when the component unmounts or the dependencies change.
+1. React is a library for building front-end user interfaces, but to create complete apps, we also need a back-end server to handle business logic, data storage, and other functionality.
+1. The communication between the front-end and the back-end happens over HTTP, the same protocol that powers the web. The front-end sends an HTTP request to the backend, and the back-end sends an HTTP response back.
+1. Each HTTP request and response contains a header and a body. The header provides metadata about the message, such as the content type and HTTP status code, while the body contains the actual data being sent or received.
+1. To send HTTP requests to the backend, we can use axios, a popular JavaScript library. axios makes it easy to send requests.
+1. When we send HTTP requests with the effect hook, we should provide a clean-up function to cancel the request if the component is unmounted before the response is received. This is important to prevent errors, especially if the user navigates to a different page while the request is still pending.
+1. When sending HTTP requests, we must handle errors properly. This can be done using try-catch blocks or by handling the error in the promise chain using .catch().
+1. Custom hooks are a way to reuse code logic between multiple components. By encapsulating logic in a custom hook, we can create reusable pieces of code that can be shared across components without duplicating the code. Custom hooks can be used to handle common tasks, such as fetching data, and can help to make our code more organized and easier to maintain.
